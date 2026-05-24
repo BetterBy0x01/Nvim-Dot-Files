@@ -38,6 +38,15 @@ require("config.options")
 -- Load the keymaps from the config/keymaps.lua file
 require("config.keymaps")
 
+-- Compatibility shim for Neovim 0.10+
+if not vim.treesitter.ft_to_lang then
+  vim.treesitter.ft_to_lang = function(ft)
+    if vim.treesitter.language and vim.treesitter.language.get_lang then
+      return vim.treesitter.language.get_lang(ft) or ft
+    end
+    return ft
+  end
+end
 
 -- Setup lazy, this should always be last
 -- Tell laxy that all plugin specs are found in the plugins directory

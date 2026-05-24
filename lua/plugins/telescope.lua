@@ -1,8 +1,6 @@
 return {
     {
         'nvim-telescope/telescope.nvim',
-        -- pull a specific version of the plugin
-        tag = '0.1.6',
         dependencies = {
             -- general purpose plugin used to build user interfaces in neovim plugins
             'nvim-lua/plenary.nvim'
