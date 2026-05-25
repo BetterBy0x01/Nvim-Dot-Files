@@ -33,6 +33,9 @@ local opts = {
     }
 }
 
+-- Vertical visual guideline set to column 100
+vim.opt.colorcolumn = "100"
+
 -- Load the options from the config/options.lua file
 require("config.options")
 -- Load the keymaps from the config/keymaps.lua file
