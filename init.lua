@@ -58,6 +58,9 @@ if not vim.treesitter.ft_to_lang then
   end
 end
 
+-- Load the auto commands from config/autocmd.lua file
+require("config.autocmds")
+
 -- Setup lazy, this should always be last
 -- Tell laxy that all plugin specs are found in the plugins directory
 -- Pass it the options we specified above
