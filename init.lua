@@ -1,3 +1,6 @@
+-- Exit insert mode
+vim.keymap.set('i', '<C-[>', '<Esc>', { desc = 'Exit insert mode' })
+
 -- Declare the path where lazy will clone plugin code
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
